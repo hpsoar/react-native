@@ -16,6 +16,7 @@ package com.facebook.react.uiapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
 
 import com.facebook.react.LifecycleState;
@@ -23,8 +24,9 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
+import me.nucleartux.date.ReactDatePackage;
 
-public class UIExplorerActivity extends Activity implements DefaultHardwareBackBtnHandler {
+public class UIExplorerActivity extends FragmentActivity implements DefaultHardwareBackBtnHandler {
 
   private ReactInstanceManager mReactInstanceManager;
 
@@ -38,6 +40,7 @@ public class UIExplorerActivity extends Activity implements DefaultHardwareBackB
         .setBundleAssetName("UIExplorerApp.android.bundle")
         .setJSMainModuleName("Examples/UIExplorer/UIExplorerApp.android")
         .addPackage(new MainReactPackage())
+            .addPackage(new ReactDatePackage(this))
         .setUseDeveloperSupport(true)
         .setInitialLifecycleState(LifecycleState.RESUMED)
         .build();

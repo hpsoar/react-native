@@ -125,7 +125,7 @@ var styles = StyleSheet.create({
   },
   toolbar: {
     backgroundColor: '#E9EAED',
-    height: 56,
+    height: 44,
   },
 });
 

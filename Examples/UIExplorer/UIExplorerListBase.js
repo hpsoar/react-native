@@ -24,6 +24,7 @@ var {
   TextInput,
   TouchableHighlight,
   View,
+  Platform,
 } = React;
 var createExamplePage = require('./createExamplePage');
 
@@ -69,8 +70,12 @@ class UIExplorerListBase extends React.Component {
   }
 
   renderTextInput(searchTextInputStyle: any) {
+    var paddingTop = 15;
+    if (Platform.OS == "ios") {
+       paddingTop = 75;
+    }
     return (
-      <View style={styles.searchRow}>
+      <View style={styles.searchRow, {paddingTop: paddingTop} }>
         <TextInput
           autoCapitalize="none"
           autoCorrect={false}
@@ -178,7 +183,6 @@ var styles = StyleSheet.create({
   },
   searchRow: {
     backgroundColor: '#eeeeee',
-    paddingTop: 75,
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 10,

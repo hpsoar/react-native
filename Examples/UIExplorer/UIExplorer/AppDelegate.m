@@ -59,7 +59,7 @@
      * on the same Wi-Fi network.
      */
 
-    sourceURL = [NSURL URLWithString:@"http://localhost:8081/Examples/UIExplorer/UIExplorerApp.ios.bundle?platform=ios&dev=true"];
+    sourceURL = [NSURL URLWithString:@"http://192.168.2.60:8081/Examples/UIExplorer/UIExplorerApp.ios.bundle?platform=ios&dev=true"];
 
     /**
      * OPTION 2

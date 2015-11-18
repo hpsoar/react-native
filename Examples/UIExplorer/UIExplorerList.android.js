@@ -33,6 +33,7 @@ var COMPONENTS = [
   require('./TouchableExample'),
   require('./ViewExample'),
   require('./ViewPagerAndroidExample.android'),
+  require('./DatePickerAndroidExample'),
 ];
 
 var APIS = [
